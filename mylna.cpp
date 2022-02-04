@@ -1,29 +1,31 @@
+///Dokumentacja klasy MyLnA
 class MyLnA
     {
     private:
-        double mX; 
-        double mA;
-    public:
-        MyLnA(double a = 0){
+        double mX; /*!< definicje zmiennych prywatnych *///zmienna double mX//
+        double mA; /*!< definicje zmiennych prywatnych */ //zmienna double mX//
+    public: /**Deklaracja metod publicznych*/
+        MyLnA(double a = 0){  /**< metoda z parametrem double */
+                
             mA = a;
 
         };
-        MyLnA(double x, double a = 0){
-            mX = x;
+        MyLnA(double x, double a = 0){  /** metoda z dwoma parametrami */
+
             mA = a;
 
         };
-        MyLnA(const MyLnA %obj){
+        MyLnA(const MyLnA %obj){/** metoda z parametrem MyLnA &obj*/
             mX = obj.mX;
             mA = obj.mA;
 
         };
-        ~MyLnA(){
+        ~MyLnA(){ /** dekonstruktor*/
             mX = 0;
             mA = 0;
 
         };
-        double value(){
+        double value(){/** metoda value. */
             double lnx = double log(mA);
             for (int i =0; i<10; i++){
                 lnx+=pow(-1,i)/(pow(mA,i+1))*pow((mX-mA),i+1)/(i+1);
@@ -33,20 +35,18 @@ class MyLnA
         
 
         };
-        void setX(){
+        void setX(){ /** metoda set x */
             mX = x;
 
         };
-        double getX(){
-            return mX;
+        double getX(){ /** metoda get x  */
 
         };
-        void setA(double){
+        void setA(double){  /** metoda set a  */
             mA = a;
 
         } 
-        double getA(){
-
+        double getA(){  /** metoda get a */
 return mA;
         }
     };
